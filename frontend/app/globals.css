@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-900 text-white;
+}
+.grid-tile {
+  @apply h-16 w-16 flex items-center justify-center border border-gray-500 bg-gray-800;
+}
