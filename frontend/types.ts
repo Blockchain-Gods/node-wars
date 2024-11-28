@@ -15,3 +15,19 @@ export interface GameState {
 export type GameAction =
   | { type: "MAKE_MOVE"; row: number; col: number }
   | { type: "RESET_GAME" };
+
+export interface GameMatch {
+  id: string;
+  player1: {
+    address: string;
+    ready: boolean;
+  };
+  player2?: {
+    address: string;
+    ready: boolean;
+  };
+  stakes: number;
+  status: "waiting" | "in_progress" | "completed";
+  createdAt: Date;
+  spectators: number;
+}
